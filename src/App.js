@@ -15,6 +15,7 @@ export default function App(props) {
       setIssues(res.data)
       setDisplayData(res.data.slice(parseInt(props.index) ,parseInt(props.index)+20))
     })
+<<<<<<< HEAD
   }, [props.reRender])
   
   return (
@@ -22,5 +23,19 @@ export default function App(props) {
       <h1>hello</h1>
       <RenderIssues issues={displaydata}/>
     </div>
+=======
+  }, [])
+
+  useEffect(() => {
+    setDisplayData(Issues.slice(parseInt(props.index) ,parseInt(props.index)+20))
+  }, [displaydata])
+  
+  return (
+    <Router>
+      <h1>Displaying Bug {parseInt(props.index)+1} to {parseInt(props.index)+20} </h1>
+      <Route exact path='/' render={()=>  <h1>hi</h1>} />
+      <Route path='/show/:index'  render={(props)=> {return <RenderIssues issues={displaydata}/>}}/>
+    </Router>
+>>>>>>> 007991644ffc5cbea4e96ad196eaa01847a2e99a
   );
 }
