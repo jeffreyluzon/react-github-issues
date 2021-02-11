@@ -6,7 +6,7 @@ import RenderIssues from './component/RenderIssues'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
 
-export default function App() {
+export default function App(props) {
   const [Issues, setIssues] = useState([]) 
   const [displaydata, setDisplayData] = useState([])
 
@@ -15,18 +15,18 @@ export default function App() {
     .then(res => {
       // console.log(res.data)
       setIssues(res.data)
-      setDisplayData(res.data.slice(0 ,20))
+      setDisplayData(res.data.slice(parseInt(props.index) ,parseInt(props.index+20)))
       console.log(displaydata)
+      console.log(props.index)
+      console.log(parseInt(props.index+20))
     })
   }, [])
   
   return (
     <Router>
-      <Route exact path='/' render={()=> {return <h1>hi</h1>}} />
+      <h1>hello</h1>
+      <Route exact path='/' render={()=>  <h1>hi</h1>} />
       <Route path='/show/:index'  render={(props)=> {return <RenderIssues issues={displaydata}/>}}/>
-      <div className="App">
-        {/* <h1><RenderIssues issues={displaydata}/></h1> */}
-      </div>
     </Router>
   );
 }
