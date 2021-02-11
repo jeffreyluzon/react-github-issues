@@ -1,21 +1,21 @@
-import './App.css';
+import logo from './logo.svg';
+import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import React, { useEffect } from 'react'
-export default function App() {
+import './App.css';
+import RenderIssues from './component/RenderIssues'
+
+function App() {
 
   useEffect(() => {
-    axios.get('https://api.github.com/repos/facebook/react/issues?page=1&per_page=10')
+    axios.get('https://api.github.com/repos/facebook/react/issues?page=1&per_page=100')
     .then(res => {
       console.log(res.data)
     })
   }, [])
-
-
-
   return (
-    <div className="App">
-      <h1> Group labs</h1>
 
+    <div className="App">
+      <h1><RenderIssues/></h1>
     </div>
   );
 }
