@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import './App.css';
-import RenderIssues from './RenderIssues'
+import RenderIssues from './component/RenderIssues'
 
 function App() {
   const [Issues, setIssues] = useState([]) 
@@ -22,4 +22,4 @@ function App() {
   );
 }
 
-export default App;
+
