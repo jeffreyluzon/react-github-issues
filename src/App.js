@@ -11,6 +11,7 @@ function App() {
       console.log(res.data)
     })
   }, [])
+  
   return (
     <div className="App">
       <h1>Hello</h1>
