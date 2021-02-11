@@ -4,7 +4,7 @@ import axios from 'axios'
 import './App.css';
 import RenderIssues from './component/RenderIssues'
 
-function App() {
+export default function App() {
   const [Issues, setIssues] = useState([]) 
 
   useEffect(() => {
@@ -21,5 +21,6 @@ function App() {
     </div>
   );
 }
+
 
 
