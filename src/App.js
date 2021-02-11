@@ -14,6 +14,7 @@ export default function App() {
       setIssues(res.data)
     })
   }, [])
+  
   return (
 
     <div className="App">
