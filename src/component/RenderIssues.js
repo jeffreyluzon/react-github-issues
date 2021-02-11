@@ -1,8 +1,11 @@
 import Issue from './Issue'
-const RenderIssues= () => {
+const RenderIssues= (props) => {
+    const display = props.issues.map((issue ,i)=> {
+       return <Issue issue={issue} key={`key${i}`} />
+    })
     return(
         <div>
-            <Issue />
+            {display}
         </div>
     )
 }
