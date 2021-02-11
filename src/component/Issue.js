@@ -2,8 +2,10 @@
 export default function Issue (prop) {
 
         return (
-            <h1>
-                issue here!!
-            </h1>
+            <div>
+                <p>
+                    Link: <a href={prop.issue.html_url}>{prop.issue.title}</a>
+                </p>
+            </div>
     )
 }
