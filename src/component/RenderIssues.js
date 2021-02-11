@@ -1,8 +1,8 @@
-
+import Issue from './Issue'
 const RenderIssues= () => {
     return(
         <div>
-
+            <Issue />
         </div>
     )
 }

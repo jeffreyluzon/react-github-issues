@@ -10,7 +10,10 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-markdown": "^5.0.3",
+<<<<<<< HEAD
+=======
     "react-router-dom": "^5.2.0",
+>>>>>>> 8a7a5197dd5e9aef0641b0a4591b3534451695b1
     "react-scripts": "4.0.2",
     "web-vitals": "^1.1.0"
   },
