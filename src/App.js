@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import './App.css';
+import RenderIssues from './RenderIssues'
 
 function App() {
 
@@ -13,8 +14,9 @@ function App() {
   }, [])
   
   return (
+
     <div className="App">
-      <h1>Hello</h1>
+      <h1><RenderIssues/></h1>
     </div>
   );
 }
